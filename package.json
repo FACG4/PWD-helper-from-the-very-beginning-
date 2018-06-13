@@ -1,0 +1,32 @@
+{
+  "name": "pwd-helpers",
+  "version": "1.0.0",
+  "description": "###### By:  Israa, Sallam, Balsam, Inass   :two_women_holding_hands::two_women_holding_hands:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACG4/PWD-helpers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACG4/PWD-helpers/issues"
+  },
+  "homepage": "https://github.com/FACG4/PWD-helpers#readme",
+  "dependencies": {
+    "env2": "^2.2.0",
+    "eslint": "^4.19.1",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "formidable": "^1.2.1",
+    "multer": "^1.3.0",
+    "pg": "^7.4.3",
+    "serve-favicon": "^2.5.0",
+    "sweetalert": "^2.1.0"
+  },
+  "devDependencies": {}
+}
