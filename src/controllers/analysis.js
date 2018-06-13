@@ -5,7 +5,7 @@ const fs = require('fs');
 exports.post = (req, res) => {
   const form = new formidable.IncomingForm();
   form.encoding = 'utf-8';
-  form.uploadDir = '/home/israa/Desktop/PWD-helpers/public/images';
+  form.uploadDir = '/home/israa/PWD-helper-from-the-very-beginning-/public/images';
   form.keepExtensions = true;
   form.parse(req, (err, fields, files) => {
     const oldpath = files.img1.path;
@@ -23,8 +23,8 @@ exports.post = (req, res) => {
       }
       res.render('analysis', {
         solutions,
-        img1: `${oldpath.split('/')[6]}/${newpath.split('/')[7]}`,
-        img2: `${files.img2.path.split('/')[6]}/${files.img2.path.split('/')[7]}`,
+        img1: `${oldpath.split('/')[5]}/${newpath.split('/')[6]}`,
+        img2: `${files.img2.path.split('/')[5]}/${files.img2.path.split('/')[6]}`,
       });
     });
   });

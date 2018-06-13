@@ -3,7 +3,6 @@ body{
   padding: 0;
   box-sizing: border-box;
   height: 5000px;
-
 }
 
 .clearfix {
@@ -15,7 +14,6 @@ body{
   clear: both;
   display: table;
 }
-
 
 .topnav {
   overflow: hidden;
@@ -32,9 +30,7 @@ body{
   text-decoration: none;
   font-size: 17px;
   float: right;
-
 }
-
 
 .topnav .logo{
   float: left;
@@ -46,7 +42,6 @@ body{
   color: white;
 }
 .active img {
-
   width: 106px;
   height:  70px;
 }
@@ -145,7 +140,6 @@ display: none  }
 .w3-sidebar{
   margin-top: 97px;
 }
-
 
 .w3-container {
   padding-top: 130px !important
