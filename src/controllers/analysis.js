@@ -1,6 +1,10 @@
 
 const formidable = require('formidable');
 const fs = require('fs');
+const nodemailer = require('nodemailer');
+const solutions = [];
+const solutinA1 = ' you have to do something for the entrance';
+
 
 exports.post = (req, res) => {
   const form = new formidable.IncomingForm();
@@ -13,14 +17,37 @@ exports.post = (req, res) => {
 
     fs.rename(oldpath, newpath, () => {
       if (err) throw err;
-      const solutions = [];
-      const solutinA1 = ' you have to do something for the entrance';
       if (fields.A1 === 'No') {
         solutions.push(`Solution for A1${solutinA1}`);
       }
       if (fields.A2 === 'No') {
         solutions.push(`Solution for A2${solutinA1}`);
       }
+      var transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: 'isramm94@gmail.com',
+          pass: 'prwqhtaisekmgcfq'
+        }
+      });
+
+      var mailOptions = {
+        from: 'isramm94@gmail.com',
+        to: 'anoos.hanii@gmail.com',
+        subject: 'Sending Email!!!!!!!!!!!!!!',
+        text: 'this was the solutions'
+      };
+
+      transporter.sendMail(mailOptions, function(error, info){
+      console.log('we are in sending mail function!!');
+        if (error) {
+          console.log(error);
+        } else {
+          console.log('Email sent: ' + info.response);
+        }
+      });
+
+
       res.render('analysis', {
         solutions,
         img1: `${oldpath.split('/')[5]}/${newpath.split('/')[6]}`,
@@ -29,3 +56,6 @@ exports.post = (req, res) => {
     });
   });
 };
+
+// exports.sendMail = (req,res)=>{
+// }
