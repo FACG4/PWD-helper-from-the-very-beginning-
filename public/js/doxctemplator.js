@@ -1,6 +1,7 @@
 const select = (element) => document.querySelector(element);
 
 function postData(inputs){
+  console.log(inputs);
     fetch('/formToDocx', {
       method: 'POST',
       headers: {
@@ -31,6 +32,7 @@ function submit(){
     }
   });
   postData(inputsValues);
+
 };
 
 select('#submit').addEventListener("click", function(){
