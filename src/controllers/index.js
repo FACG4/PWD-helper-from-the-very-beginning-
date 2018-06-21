@@ -5,20 +5,17 @@ const path = require('path');
 const JSZip = require('jszip');
 const brreg = require('brreg')
 
-
 const router = express.Router();
 const home = require('./home');
 const form = require('./form');
 const analysis = require('./analysis');
-
 
 router.get('/', home.get);
 router.get('/form', form.get);
 router.post('/analysis', analysis.post);
 // router.get('/analysis', analysis.sendMail);
 
-router.post('/surve-contract', (req, res) => {
-  console.log('sssssssssssssssssssss');
+router.post('/formToDocx', (req, res) => {
   const inputsValues = req.body
   const content = fs
       .readFileSync(path.join(__dirname, 'template.docx'), "binary");
@@ -39,9 +36,7 @@ router.post('/surve-contract', (req, res) => {
 
   const fileName = "contract.docx";
   const filePath = path.join(__dirname, '..','..', 'public','contract.docx');
-
   fs.writeFileSync(filePath, buf);
-
   return res.json({status: true});
 });
 
