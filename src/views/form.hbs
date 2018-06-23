@@ -11,15 +11,19 @@
   <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Bottom')">EMERGENCY, EVACUATION, ALARMS</button>
 </div>
 <div style="margin-left:160px">
-  <form action="/analysis" method="post" id="form" enctype="multipart/form-data" >
+  <form action="/analysis" method="post" id="form" enctype="multipart/form-data">
 
     <div class="w3-padding">Use any of the w3-animate-classes to fade, zoom or slide in tab content.</div>
 
     <div id="Fade" class="w3-container city w3-animate-opacity">
       <input type="submit" name="submit" value="Submit">
-        <button type="button" name="submit" id="submit">Convert Form to Docx</button>
-      Add image: <input type="file" value="img1" name="img1">
-      Add image: <input type="file" value="img2" name="img2">
+      <button type="button" name="submit" id="submit">Convert Form to Docx</button><br>
+      <label for="place">Location</label>
+      <input type="text" id="place" name="location" value="" checked><br>
+      <label for="img1"> Add image: </label>
+      <input type="file" value="img1" id="img1" name="img1"><br>
+      <label for="img2">Add image:</label>
+      <input type="file" value="img2" id="img2" name="img2">
       <h2>A.1  Is the entrance of the building located at less than 50mt from the street?</h2>
       <input type="radio" name="A1" value="Yes"> Yes<br>
       <input type="radio" name="A1" value="No" id='A1'> No<br>
@@ -150,8 +154,7 @@
       <h2>A.4.8.5 Are handrails horizontally extended for at least 30cm at the begging and end of the ramp/stairs?</h2>
       <input type="radio" name="A4.8.5" value="Yes"> Yes<br>
       <input type="radio" name="A4.8.5" value="No" id="A4.8.5"> No<br>
-      <input type="radio" name="A4.8.5" value="dk"> Don't Know <br>
-       Comments: <textarea id="sectionATextarea" rows="8" cols="80"></textarea><br>
+      <input type="radio" name="A4.8.5" value="dk"> Don't Know <br> Comments: <textarea id="sectionATextarea" rows="8" cols="80"></textarea><br>
 
 
 
@@ -208,8 +211,7 @@
       <h2>B.8 Is the entrance to the building marked and visible?</h2>
       <input type="radio" value="Yes" name="B.8"> Yes<br>
       <input type="radio" value="No" id="B.8" name="B.8"> No<br>
-      <input type="radio" value="DK" name="B.8"> N/A<br>
-      Comments: <textarea id="sectionBTextarea" rows="8" cols="80"></textarea><br> Add images:
+      <input type="radio" value="DK" name="B.8"> N/A<br> Comments: <textarea id="sectionBTextarea" rows="8" cols="80"></textarea><br> Add images:
 
     </div>
 
@@ -302,8 +304,7 @@
     Is the tap located at maximum 30cm from the edge of the washbasin?</h2>
       <input type="radio" name="D.15" value="Yes"> Yes<br>
       <input type="radio" name="D.15" value="No" id="D.15"> No<br>
-      <input type="radio" name="D.15" value="dk"> Don't Know <br>
-       Comments: <textarea id="sectionDTextarea" rows="8" cols="80"></textarea><br>
+      <input type="radio" name="D.15" value="dk"> Don't Know <br> Comments: <textarea id="sectionDTextarea" rows="8" cols="80"></textarea><br>
     </div>
 
     <!-- Fourth section -->
@@ -400,8 +401,7 @@
       <h2>C7.2.5 Are handrails horizontally extended for at least 30cm at the begging and end of the ramp/stairs?</h2>
       <input type="radio" value="Yes" name="C.7.2.5"> Yes<br>
       <input type="radio" value="No" id="C.7.2.5" name="C.7.2.5"> No<br>
-      <input type="radio" value="DK" name="C.7.2.5"> N/A<br>
-      Comments: <textarea id="sectionCTextarea" rows="8" cols="80"></textarea><br>
+      <input type="radio" value="DK" name="C.7.2.5"> N/A<br> Comments: <textarea id="sectionCTextarea" rows="8" cols="80"></textarea><br>
 
 
     </div>
@@ -422,8 +422,7 @@
       <h2>E.3 Is there an established evacuation plan in case of emergency?</h2>
       <input type="radio" name="E.3" value="Yes"> Yes<br>
       <input type="radio" name="E.3" value="No" id="E.3"> No<br>
-      <input type="radio" name="E.3" value="dk"> Don't Know <br>
-      Comments: <textarea id="sectionETextarea" rows="8" cols="80"></textarea><br>
+      <input type="radio" name="E.3" value="dk"> Don't Know <br> Comments: <textarea id="sectionETextarea" rows="8" cols="80"></textarea><br>
 
     </div>
 
@@ -431,4 +430,4 @@
 </div>
 <script type="text/javascript" src="/js/domForForm.js">
 </script>
-  <script src="./js/doxctemplator.js"></script>
+<script src="./js/doxctemplator.js"></script>

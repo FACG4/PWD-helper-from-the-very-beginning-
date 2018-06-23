@@ -24,13 +24,11 @@ function submit() {
   const comments = document.querySelectorAll('textarea');
   const formValues = {};
   inputs.forEach((input) => {
-    if (input.checked) {
-      let inputName;
-      if (input.attributes.name) {
-        inputName = input.attributes.name.nodeValue;
-      }
-      formValues[inputName] = input.value;
+    let inputName;
+    if (input.attributes.name) {
+      inputName = input.attributes.name.nodeValue;
     }
+    formValues[inputName] = input.value;
   });
   comments.forEach((comment) => {
     let commentId;
