@@ -2,6 +2,7 @@
 const formidable = require('formidable');
 const fs = require('fs');
 const nodemailer = require('nodemailer');
+
 const solutions = [];
 const solutinA1 = ' you have to do something for the entrance';
 
@@ -22,26 +23,26 @@ exports.post = (req, res) => {
       if (fields.A2 === 'No') {
         solutions.push(`Solution for A2${solutinA1}`);
       }
-      var transporter = nodemailer.createTransport({
+      const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
           user: 'isramm94@gmail.com',
-          pass: 'prwqhtaisekmgcfq'
-        }
+          pass: '',
+        },
       });
 
-      var mailOptions = {
+      const mailOptions = {
         from: 'isramm94@gmail.com',
         to: 'anoos.hanii@gmail.com',
         subject: 'Sending Email!!!!!!!!!!!!!!',
-        text: 'this was the solutions'
+        text: 'this was the solutions',
       };
 
-      transporter.sendMail(mailOptions, function(error, info){
+      transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
           console.log(error);
         } else {
-          console.log('Email sent: ' + info.response);
+          console.log(`Email sent: ${info.response}`);
         }
       });
       res.render('analysis', {

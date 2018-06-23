@@ -18,10 +18,8 @@
   },
   "homepage": "https://github.com/FACG4/PWD-helpers#readme",
   "dependencies": {
-    "brreg": "^3.0.0",
     "docxtemplater": "^3.6.6",
     "env2": "^2.2.0",
-    "eslint": "^4.19.1",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "formidable": "^1.2.1",
@@ -32,5 +30,9 @@
     "serve-favicon": "^2.5.0",
     "sweetalert": "^2.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.12.0"
+  }
 }
