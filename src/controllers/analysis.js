@@ -27,15 +27,15 @@ exports.post = (req, res) => {
         service: 'gmail',
         auth: {
           user: 'isramm94@gmail.com',
-          pass: '',
+          pass: process.env.PASS,
         },
       });
 
       const mailOptions = {
         from: 'isramm94@gmail.com',
-        to: 'anoos.hanii@gmail.com',
+        to: 'isramm94@gmail.com',
         subject: 'Sending Email!!!!!!!!!!!!!!',
-        text: 'this was the solutions',
+        text: `Solution for A2${solutinA1}`,
       };
 
       transporter.sendMail(mailOptions, (error, info) => {
