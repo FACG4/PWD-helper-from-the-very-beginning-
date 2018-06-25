@@ -14,9 +14,6 @@ exports.post = (req, res) => {
   form.uploadDir = path.join(__dirname, '..', '..', 'public', 'images');
   form.keepExtensions = true;
   form.parse(req, (err, fields, files) => {
-    const oldpath = files.img1.path;
-    const newpath = `${form.uploadDir}/${files.img1.name}`;
-
     if (fields.A1 === 'No') {
       solutions.push(`Solution for A1${solutinA1}`);
     }
@@ -24,16 +21,13 @@ exports.post = (req, res) => {
       solutions.push(`Solution for A2${solutinA1}`);
     }
     const inputsValues = fields;
-    inputsValues.img1 = path.join(__dirname, '..', '..', 'public', 'images', files.img1.path.split('/')[6]);
-    inputsValues.img2 = path.join(__dirname, '..', '..', 'public', 'images', files.img2.path.split('/')[6]);
-    inputsValues.img1B = path.join(__dirname, '..', '..', 'public', 'images', files.img1B.path.split('/')[6]);
-    inputsValues.img2B = path.join(__dirname, '..', '..', 'public', 'images', files.img2B.path.split('/')[6]);
-    inputsValues.img1C = path.join(__dirname, '..', '..', 'public', 'images', files.img1C.path.split('/')[6]);
-    inputsValues.img2C = path.join(__dirname, '..', '..', 'public', 'images', files.img2C.path.split('/')[6]);
-    inputsValues.img1D = path.join(__dirname, '..', '..', 'public', 'images', files.img1D.path.split('/')[6]);
-    inputsValues.img2D = path.join(__dirname, '..', '..', 'public', 'images', files.img2D.path.split('/')[6]);
-    inputsValues.img1E = path.join(__dirname, '..', '..', 'public', 'images', files.img1E.path.split('/')[6]);
-    inputsValues.img2E = path.join(__dirname, '..', '..', 'public', 'images', files.img2E.path.split('/')[6]);
+    const imagesNames = [files.img1.path.split('/')[6], files.img2.path.split('/')[6], files.img1B.path.split('/')[6], files.img2B.path.split('/')[6], files.img1C.path.split('/')[6], files.img2C.path.split('/')[6], files.img1D.path.split('/')[6], files.img2D.path.split('/')[6], files.img1E.path.split('/')[6], files.img2E.path.split('/')[6]];
+    const inputValuesObjectImages = ['img1', 'img2', 'img1B', 'img2B', 'img1C', 'img2C', 'img1D', 'img2D', 'img1E', 'img2E'];
+
+    for (let j = 0; j < 10; j++) {
+      inputsValues[inputValuesObjectImages[j]] = path.join(__dirname, '..', '..', 'public', 'images', imagesNames[j]);
+    }
+
     const content = fs
       .readFileSync(path.join(__dirname, 'template.docx'), 'binary');
     const opts = {};
@@ -43,7 +37,7 @@ exports.post = (req, res) => {
     };
 
     opts.getSize = function (img, tagValue, tagName) {
-      return [150, 150];
+      return [200, 200];
     };
 
     const imageModule = new ImageModule(opts);
@@ -71,8 +65,16 @@ exports.post = (req, res) => {
     res.render('analysis', {
       fields,
       solutions,
-      img1: `${oldpath.split('/')[5]}/${newpath.split('/')[6]}`,
-      img2: `${files.img2.path.split('/')[5]}/${files.img2.path.split('/')[6]}`,
+      img1A: `${files.img1.path.split('/')[5]}/${imagesNames[0]}`,
+      img2A: `${files.img2.path.split('/')[5]}/${imagesNames[1]}`,
+      img1B: `${files.img1B.path.split('/')[5]}/${imagesNames[2]}`,
+      img2B: `${files.img2B.path.split('/')[5]}/${imagesNames[3]}`,
+      img1C: `${files.img1C.path.split('/')[5]}/${imagesNames[4]}`,
+      img2C: `${files.img2C.path.split('/')[5]}/${imagesNames[5]}`,
+      img1D: `${files.img1D.path.split('/')[5]}/${imagesNames[6]}`,
+      img2D: `${files.img2D.path.split('/')[5]}/${imagesNames[7]}`,
+      img1E: `${files.img1E.path.split('/')[5]}/${imagesNames[8]}`,
+      img2E: `${files.img2E.path.split('/')[5]}/${imagesNames[9]}`,
       status: true,
     });
   });
