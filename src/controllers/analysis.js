@@ -26,9 +26,15 @@ exports.post = (req, res) => {
 
     const imagesSizes = [files.img1A.size, files.img2A.size, files.img1B.size, files.img2B.size, files.img1C.size, files.img2C.size, files.img1D.size, files.img2D.size, files.img1E.size, files.img2E.size];
 
+    const solutionsForWordFile = ['sol1', 'sol2']; // supposed to contain solutions for every single question!!
+
     const inputValuesObjectImages = ['img1A', 'img2A', 'img1B', 'img2B', 'img1C', 'img2C', 'img1D', 'img2D', 'img1E', 'img2E'];
 
     const inputValuesObjectImagesSizes = ['img1Asize', 'img2Asize', 'img1Bsize', 'img2Bsize', 'img1Csize', 'img2Csize', 'img1Dsize', 'img2Dsize', 'img1Esize', 'img2Esize'];
+
+    for (let j = 0; j < 2; j++) {
+      inputsValues[solutionsForWordFile[j]] = solutinA1;
+    }
 
     for (let j = 0; j < 10; j++) {
       inputsValues[inputValuesObjectImages[j]] = path.join(__dirname, '..', '..', 'public', 'images', imagesNames[j]);
