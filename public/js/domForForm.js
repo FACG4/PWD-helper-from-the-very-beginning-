@@ -14,3 +14,5 @@ function openLink(evt, animName) {
   document.getElementById(animName).style.display = 'block';
   evt.currentTarget.className += 'w3-red';
 }
+
+document.getElementById('form').reset();

@@ -5,8 +5,9 @@ const path = require('path');
 const JSZip = require('jszip');
 const ImageModule = require('docxtemplater-image-module');
 
-const solutions = [''];
+let solutions = [];
 const solutinA1 = ' you have to do something for the entrance';
+
 
 exports.post = (req, res) => {
   const form = new formidable.IncomingForm();
@@ -14,7 +15,6 @@ exports.post = (req, res) => {
   form.uploadDir = path.join(__dirname, '..', '..', 'public', 'images');
   form.keepExtensions = true;
   form.parse(req, (err, fields, files) => {
-    console.log(files);
     if (fields.A1 === 'No') {
       solutions.push(`Solution for A1${solutinA1}`);
     }
@@ -113,5 +113,7 @@ exports.post = (req, res) => {
       img2Esize: files.img2E.size,
       status: true,
     });
+
+    solutions = [];
   });
 };
