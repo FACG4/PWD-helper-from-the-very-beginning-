@@ -1,25 +1,53 @@
 <div class="analysis">
-  <h1>This is your analysis!!!!</h1>
-  {{#each solutions}}
-    {{this}} <br>
-  {{/each}}
+
+  {{#if solutions}}
+    <h1>This is your analysis!!!!</h1>
+    {{#each solutions}}
+      {{this}} <br>
+    {{/each}}
+  {{/if}}
 
 </div>
 
-<img src="./{{img1A}}" alt="image uploaded from section A">
-<img src="./{{img2A}}" alt="image uploaded from section A">
+{{#if img1Asize}}
+  <img src="./{{img1A}}" alt="image uploaded from section A">
+{{/if}}
 
-<img src="./{{img1B}}" alt="image uploaded from section B">
-<img src="./{{img2B}}" alt="image uploaded from section B">
+{{#if img2Asize}}
+  <img src="./{{img2A}}" alt="image uploaded from section A">
+{{/if}}
 
-<img src="./{{img1C}}" alt="image uploaded from section C">
-<img src="./{{img2C}}" alt="image uploaded from section C">
+{{#if img1Bsize}}
+  <img src="./{{img1B}}" alt="image uploaded from section B">
+{{/if}}
 
-<img src="./{{img1D}}" alt="image uploaded from section D">
-<img src="./{{img2D}}" alt="image uploaded from section D">
+{{#if img2Bsize}}
+  <img src="./{{img2B}}" alt="image uploaded from section B">
+{{/if}}
 
-<img src="./{{img1E}}" alt="image uploaded from section E">
-<img src="./{{img2E}}" alt="image uploaded from section E">
+{{#if img1Csize}}
+  <img src="./{{img1C}}" alt="image uploaded from section C">
+{{/if}}
+
+{{#if img2Csize}}
+  <img src="./{{img2C}}" alt="image uploaded from section C">
+{{/if}}
+
+{{#if img1Dsize}}
+  <img src="./{{img1D}}" alt="image uploaded from section D">
+{{/if}}
+
+{{#if img2Dsize}}
+  <img src="./{{img2D}}" alt="image uploaded from section D">
+{{/if}}
+
+{{#if img1Esize}}
+  <img src="./{{img1E}}" alt="image uploaded from section E">
+{{/if}}
+
+{{#if img2Esize}}
+  <img src="./{{img2E}}" alt="image uploaded from section E">
+{{/if}}
 
 <br>
 
