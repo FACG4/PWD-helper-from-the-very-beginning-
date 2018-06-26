@@ -2,25 +2,38 @@ const select = element => document.getElementById(element);
 const nextToB = select('nextToB');
 const nextToD = select('nextToD');
 const nextToC = select('nextToC');
-const previousToA = selectd('previousToA');
+const previousToA = select('previousToA');
 const previousToB = select('previousToB');
 const previousToD = select('previousToD');
 const previousToC = select('previousToC');
 
+previousToA.addEventListener("click", function (e) {
+    e.preventDefault();
+});
 
-const next = [];
-next.push(nextToB);
-next.push(nextToD);
-next.push(nextToC);
-next.push(nextToE);
-next.push(previousToA);
-next.push(previousToB);
-next.push(previousToD)
-next.push(previousToC)
+previousToB.addEventListener("click", function (e) {
+    e.preventDefault();
+});
+previousToD.addEventListener("click", function (e) {
+    e.preventDefault();
+});
+previousToC.addEventListener("click", function (e) {
+    e.preventDefault();
+});
 
-for (var i = 0; i <= next.length; i++) {
-    next[i].addEventListener("click", function (e) {
-        e.preventDefault();
-    });
+nextToB.addEventListener("click", function (e) {
+    e.preventDefault();
+});
 
-}
+nextToD.addEventListener("click", function (e) {
+    e.preventDefault();
+});
+
+nextToC.addEventListener("click", function (e) {
+    e.preventDefault();
+});
+
+const nextToE = document.getElementById('nextToE');
+nextToE.addEventListener("click", function (e) {
+    e.preventDefault();
+});

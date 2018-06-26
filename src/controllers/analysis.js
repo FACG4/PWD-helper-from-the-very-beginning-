@@ -6,7 +6,7 @@ const JSZip = require('jszip');
 const ImageModule = require('docxtemplater-image-module');
 
 let solutions = [];
-const solutinA1 = ' you have to do something for the entrance';
+const solutionA1 = ' you have to do something for the entrance';
 
 exports.post = (req, res) => {
   const form = new formidable.IncomingForm();
@@ -14,11 +14,12 @@ exports.post = (req, res) => {
   form.uploadDir = path.join(__dirname, '..', '..', 'public', 'images');
   form.keepExtensions = true;
   form.parse(req, (err, fields, files) => {
+
     if (fields.A1 === 'No') {
-      solutions.push(`Solution for A1${solutinA1}`);
+      solutions.push(`Solution for A1${solutionA1}`);
     }
     if (fields.A2 === 'No') {
-      solutions.push(`Solution for A2${solutinA1}`);
+      solutions.push(`Solution for A2${solutionA1}`);
     }
     const inputsValues = fields;
 
@@ -34,11 +35,13 @@ exports.post = (req, res) => {
       files.img1E.path.split('/')[7],
       files.img2E.path.split('/')[7]
     ];
+
     const inputValuesObjectImages = ['img1A', 'img2A', 'img1B', 'img2B', 'img1C', 'img2C', 'img1D', 'img2D', 'img1E', 'img2E'];
     const imagesSizes = [files.img1A.size, files.img2A.size, files.img1B.size, files.img2B.size, files.img1C.size, files.img2C.size, files.img1D.size, files.img2D.size, files.img1E.size, files.img2E.size];
     const inputValuesObjectImagesSizes = ['img1Asize', 'img2Asize', 'img1Bsize', 'img2Bsize', 'img1Csize', 'img2Csize', 'img1Dsize', 'img2Dsize', 'img1Esize', 'img2Esize'];
+    const solutionsForWordFile = ['sol1', 'sol2'];
 
-    for (let j = 0; j < 1; j++) {
+    for (let j = 0; j < 10; j++) {
       inputsValues[inputValuesObjectImages[j]] = path.join(__dirname, '..', '..', 'public', 'images', imagesNames[j]);
     }
 
@@ -46,6 +49,9 @@ exports.post = (req, res) => {
       inputsValues[inputValuesObjectImagesSizes[j]] = imagesSizes[j];
     }
 
+    for (let j = 0; j < 2; j++) {
+      inputsValues[solutionsForWordFile[j]] = solutionA1;
+    }
 
     const content = fs
       .readFileSync(path.join(__dirname, 'template.docx'), 'binary');

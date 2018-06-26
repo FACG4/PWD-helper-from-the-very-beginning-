@@ -6,6 +6,10 @@
 
   <form action="/analysis" method="post" id="form" enctype="multipart/form-data">
     <div id="Fade" class="w3-container city w3-animate-opacity">
+      <div class="locationDiv">
+        <label class="location" for="place">Location Name:</label>
+        <input class="locationInput" type="text" id="place" name="location" value="" placeholder="location">
+      </div>
       <h1>SECTION A: APROACH AND ENTRANCE </h1>
       <h3>A.1 Is the entrance of the building located at less than 50mt from the street?</h3>
       <input type="radio" name="A1" value="Yes"> Yes
@@ -141,6 +145,11 @@
       <input type="radio" name="A4.8.5" value="Yes"> Yes
       <input type="radio" name="A4.8.5" value="No" id="A4.8.5"> No
       <input type="radio" name="A4.8.5" value="dk"> Don't Know
+      <br>
+      <h2>
+        <label> Add Comments :</label>
+      </h2>
+      <textarea id="sectionATextarea" name="sectionATextarea" class="textarea" placeholder="Your Comment ..." rows="8" cols="80"></textarea>
       <h2>
         <label for="upload-photo">Adding images :</label>
       </h2>
@@ -218,9 +227,8 @@
       <br>
       <h2>
         <label> Add Comments :</label>
-
       </h2>
-      <textarea id="sectionBTextarea" class="textarea" placeholder="Your Comment ..." rows="8" cols="80"></textarea>
+      <textarea id="sectionBTextarea" name="sectionBTextarea" class="textarea" placeholder="Your Comment ..." rows="8" cols="80"></textarea>
       <h2>
         <label for="upload-photo">Adding images :</label>
       </h2>
@@ -337,10 +345,14 @@
       <input type="radio" name="D.15" value="Yes"> Yes
       <input type="radio" name="D.15" value="No" id="D.15"> No
       <input type="radio" name="D.15" value="dk"> Don't Know
+      <br>
+      <h2>
+        <label> Add Comments :</label>
+      </h2>
+      <textarea id="sectionDTextarea" name="sectionDTextarea" class="textarea" placeholder="Your Comment ..." rows="8" cols="80"></textarea>
       <h2>
         <label for="upload-photo">Adding images :</label>
       </h2>
-
       <label for="img1D" class="custom-file-upload">
         <input type="text" readonly="readonly" id="img1Dinput" placeholder="img path"> Upload your image
       </label>
@@ -352,7 +364,6 @@
       </label>
       <input id="img2D" type="file" value="img2D" name="img2D" onchange="javascript: document.getElementById ('img2Dinput').value = this.value"
       />
-
       <button id="previousToB" class="previousToB" onclick="openLink(event,'Left')">
         <span> &laquo; Previous </span>
       </button>
@@ -458,6 +469,11 @@
       <input type="radio" value="Yes" name="C.7.2.5"> Yes
       <input type="radio" value="No" id="C.7.2.5" name="C.7.2.5"> No
       <input type="radio" value="DK" name="C.7.2.5"> N/A
+      <br>
+      <h2>
+        <label> Add Comments :</label>
+      </h2>
+      <textarea id="sectionCTextarea" name="sectionCTextarea" class="textarea" placeholder="Your Comment ..." rows="8" cols="80"></textarea>
       <h2>
         <label for="upload-photo">Adding images :</label>
       </h2>
@@ -503,6 +519,11 @@
       <input type="radio" name="E.3" value="Yes"> Yes
       <input type="radio" name="E.3" value="No" id="E.3"> No
       <input type="radio" name="E.3" value="dk"> Don't Know
+      <br>
+      <h2>
+        <label> Add Comments :</label>
+      </h2>
+      <textarea id="sectioETextarea" name="sectionETextarea" class="textarea" placeholder="Your Comment ..." rows="8" cols="80"></textarea>
       <h2>
         <label for="upload-photo">Adding images :</label>
       </h2>

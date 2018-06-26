@@ -1,4 +1,3 @@
-
 function openLink(evt, animName) {
   let i;
   let x;
@@ -13,4 +12,7 @@ function openLink(evt, animName) {
   }
   document.getElementById(animName).style.display = 'block';
   evt.currentTarget.className += ' w3-red';
+}
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
 }
