@@ -107,6 +107,6 @@ exports.post = (req, res) => {
       img2Esize: files.img2E.size,
       status: true,
     });
-    solutions=[];
+    solutions = [];
   });
 };

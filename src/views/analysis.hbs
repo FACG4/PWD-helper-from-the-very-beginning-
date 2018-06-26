@@ -1,56 +1,26 @@
 <div class="analysis" id="analysis">
   <h1 class="title"> This is your analysis</h1>
-
-  {{#each  solutions}}
-    {{this}} <br> <br>
-  {{/each}}
+  {{#each solutions}} {{this}}
+  <br>
+  <br> {{/each}}
 </div>
-
 
 <div class="images">
-
-{{#if img1Asize}}
-  <img src="./{{img1A}}" alt="image uploaded from section A">
-{{/if}}
-
-{{#if img2Asize}}
-  <img src="./{{img2A}}" alt="image uploaded from section A">
-{{/if}}
-
-{{#if img1Bsize}}
-  <img src="./{{img1B}}" alt="image uploaded from section B">
-{{/if}}
-
-{{#if img2Bsize}}
-  <img src="./{{img2B}}" alt="image uploaded from section B">
-{{/if}}
-
-{{#if img1Csize}}
-  <img src="./{{img1C}}" alt="image uploaded from section C">
-{{/if}}
-
-{{#if img2Csize}}
-  <img src="./{{img2C}}" alt="image uploaded from section C">
-{{/if}}
-
-{{#if img1Dsize}}
-  <img src="./{{img1D}}" alt="image uploaded from section D">
-{{/if}}
-
-{{#if img2Dsize}}
-  <img src="./{{img2D}}" alt="image uploaded from section D">
-{{/if}}
-
-{{#if img1Esize}}
-  <img src="./{{img1E}}" alt="image uploaded from section E">
-{{/if}}
-
-{{#if img2Esize}}
-  <img src="./{{img2E}}" alt="image uploaded from section E">
-{{/if}}
+  {{#if img1Asize}}
+  <img src="./{{img1A}}" alt="image uploaded from section A"> {{/if}} {{#if img2Asize}}
+  <img src="./{{img2A}}" alt="image uploaded from section A"> {{/if}} {{#if img1Bsize}}
+  <img src="./{{img1B}}" alt="image uploaded from section B"> {{/if}} {{#if img2Bsize}}
+  <img src="./{{img2B}}" alt="image uploaded from section B"> {{/if}} {{#if img1Csize}}
+  <img src="./{{img1C}}" alt="image uploaded from section C"> {{/if}} {{#if img2Csize}}
+  <img src="./{{img2C}}" alt="image uploaded from section C"> {{/if}} {{#if img1Dsize}}
+  <img src="./{{img1D}}" alt="image uploaded from section D"> {{/if}} {{#if img2Dsize}}
+  <img src="./{{img2D}}" alt="image uploaded from section D"> {{/if}} {{#if img1Esize}}
+  <img src="./{{img1E}}" alt="image uploaded from section E"> {{/if}} {{#if img2Esize}}
+  <img src="./{{img2E}}" alt="image uploaded from section E"> {{/if}}
 </div>
 
 
-<button type="button" class="export" name="submit" id="submit">Export to Docx</button><br>
+<button type="button" class="export" name="submit" id="submit">Export to Docx</button>
+<br>
 
 <script src="./js/doxctemplator.js"></script>
