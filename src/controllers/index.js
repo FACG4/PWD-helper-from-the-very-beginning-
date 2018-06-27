@@ -7,7 +7,6 @@ const upload = multer({
 const router = express.Router();
 
 const home = require('./home');
-const cool = require('./cool');
 const form = require('./form');
 const analysis = require('./analysis');
 const multiUpload = upload.fields([{
@@ -28,7 +27,6 @@ const multiUpload = upload.fields([{
 }])
 
 router.get('/', home.get);
-router.get('/cool', cool.get);
 router.get('/form', form.get);
 router.post('/analysis', multiUpload, analysis.post);
 module.exports = router;
