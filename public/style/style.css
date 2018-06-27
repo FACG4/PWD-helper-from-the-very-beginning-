@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Cabin';
 }
 
 .clearfix {
@@ -121,13 +122,15 @@
   font-size: 15px;
 }
 
-.allForm h1,
 .allForm h2 {
   color: #0069B6;
 }
 
 .allForm h1 {
   font-size: 1.9em;
+  color: white;
+  background-color: #0069B6;
+  padding: 10px;
 }
 
 .allForm h2 {
@@ -140,6 +143,20 @@
 
 .allForm input[type="radio"] {
   margin-left: 20px;
+}
+
+input[type='radio']:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 15px;
+  background-color: white;
+  content: '';
+  display: inline-block;
+  border: 2px solid #d1d3d1;
+}
+
+input[type='radio']:checked:after {
+  background-color: #0069B6;
 }
 
 .title {
@@ -242,7 +259,6 @@
 .previousToC span {
   cursor: pointer;
   display: inline-block;
-  position: relative;
   transition: 0.5s;
 }
 
@@ -328,7 +344,43 @@
   margin-top: -65px;
 }
 
+.allForm input[type="file"] {
+  margin-top: 15px;
+}
+
+.prev {
+  visibility: hidden;
+}
+
+.textarea {
+  padding: 10px;
+  margin-top: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+input[type="file"] {
+  display: none !important;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  background-color: #0069B6;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  color: white;
+}
+
 @media screen and (max-width: 600px) {
+  .locationDiv {
+    margin-top: 20px;
+  }
   .export {
     margin-right: 100px;
   }
@@ -397,37 +449,4 @@
   .locationDiv .locationInput {
     margin-top: 10px;
   }
-}
-
-.allForm input[type="file"] {
-  margin-top: 15px;
-}
-
-.prev {
-  visibility: hidden;
-}
-
-.textarea {
-  padding: 10px;
-  margin-top: 10px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-}
-
-input[type="file"] {
-  display: none !important;
-}
-
-.custom-file-upload {
-  display: inline-block;
-  padding: 6px 12px;
-  cursor: pointer;
-  background-color: #0069B6;
-  margin-top: 10px;
-  margin-right: 10px;
-  padding: 10px;
-  border-radius: 4px;
-  color: white;
 }

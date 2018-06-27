@@ -1,7 +1,6 @@
 <title>
   Form</title>
 {{>sideNav}}
-
 <div class="allForm" id="allForm">
 
   <form action="/analysis" method="post" id="form" enctype="multipart/form-data">
@@ -10,9 +9,9 @@
         <label class="location" for="place">Location Name:</label>
         <input class="locationInput" type="text" id="place" name="location" value="" placeholder="location">
       </div>
-      <h1>SECTION A: APROACH AND ENTRANCE </h1>
+      <h1>SECTION A : APROACH AND ENTRANCE </h1>
       <h3>A.1 Is the entrance of the building located at less than 50mt from the street?</h3>
-      <input type="radio" name="A1" value="Yes"> Yes
+      <input type="radio" name="A1" value="Yes">
       <input type="radio" name="A1" value="No" id='A1'> No
       <input type="radio" name="A1" value="dk"> Don't Know
       <h3>A.2 Is the entrance of the building located at less than 50mt from the parking lot?</h3>
@@ -178,7 +177,7 @@
     </div>
     <!-- Second section -->
     <div id="Left" class="w3-container city w3-animate-left" style="display:none">
-      <h1>SECTION B: ENTRANCE</h1>
+      <h1>SECTION B : ENTRANCE</h1>
       <h3>B1 Is the entrance to the building marked and visible?</h3>
       <input type="radio" value="Yes" name="B1"> Yes
       <input type="radio" id="B.1" value="No" name="B1"> No
@@ -260,7 +259,7 @@
 
     <!-- Third Section -->
     <div id="Top" class="w3-container city w3-animate-top" style="display:none">
-      <h1>SECTION D: TOILET ROOM</h1>
+      <h1>SECTION D : TOILET ROOM</h1>
       <h3>D.1 Is there at least one accessible toilet room?</h3>
       <input type="radio" name="D.1" value="Yes"> Yes
       <input type="radio" name="D.1" value="No" id="D.1"> No
@@ -375,7 +374,7 @@
 
     <!-- Fourth section -->
     <div id="Right" class="w3-container city w3-animate-right" style="display:none">
-      <h1>SECTION C: ACCESS TO SERVICES</h1>
+      <h1>SECTION C : ACCESS TO SERVICES</h1>
 
       <h3>C1 The accessible entrance provide direct access to the main floor and reception? </h3>
       <input type="radio" value="Yes" name="C.1"> Yes
@@ -503,7 +502,7 @@
 
     <!-- Fifth section -->
     <div id="Bottom" class="w3-container city w3-animate-bottom" style="display:none">
-      <h1>SECTION E: EMERGENCY, EVACUATION, ALARMS</h1>
+      <h1>SECTION E : EMERGENCY, EVACUATION, ALARMS</h1>
 
       <h3>E.1 Is there a fire alarm system, do they have both flashing lights and audible signals? </h3>
       <input type="radio" name="E.1" value="Yes"> Yes
@@ -551,6 +550,8 @@
     </div>
 
   </form>
+
 </div>
+
 <script type="text/javascript" src="/js/domForForm.js"></script>
 <script type="text/javascript" src="/js/addIcon.js"></script>
