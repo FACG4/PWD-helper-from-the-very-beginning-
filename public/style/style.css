@@ -361,6 +361,7 @@ input[type='radio']:checked:after {
   width: 100%;
 }
 
+/* 
 input[type="file"] {
   display: none !important;
 }
@@ -375,9 +376,32 @@ input[type="file"] {
   padding: 10px;
   border-radius: 4px;
   color: white;
+} */
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+  width: 150px;
+  padding-top: 8px;
+}
+
+.custom-file-input::before {
+  content: 'Upload images';
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #0069B6;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  width: 120px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
+  .slider_images .text {
+    font-size: 25px;
+  }
   .locationDiv {
     margin-top: 20px;
   }
@@ -449,4 +473,8 @@ input[type="file"] {
   .locationDiv .locationInput {
     margin-top: 10px;
   }
+}
+
+.no{
+  display: none;
 }

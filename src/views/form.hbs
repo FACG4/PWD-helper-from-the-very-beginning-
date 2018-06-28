@@ -6,7 +6,7 @@
   <form action="/analysis" method="post" id="form" enctype="multipart/form-data">
     <div id="Fade" class="w3-container city w3-animate-opacity">
       <div class="locationDiv">
-        <label class="location" for="place">Location Name:</label>
+        <label class="location" for="place">Location Name :</label>
         <input class="locationInput" type="text" id="place" name="location" value="" placeholder="location">
       </div>
       <h1>SECTION A : APROACH AND ENTRANCE </h1>
@@ -152,27 +152,16 @@
       <h2>
         <label for="upload-photo">Adding images :</label>
       </h2>
+      <h6> * Upload one or more images</h6>
 
-      <label for="img1A" class="custom-file-upload">
-        <input type="text" readonly="readonly" id="img1Ainput" placeholder="img path"> Upload your image
-      </label>
-      <input id="img1A" type="file" value="img1A" name="img1A" onchange="javascript: document.getElementById ('img1Ainput').value = this.value"
-      />
+      <input type="text" readonly="readonly" id="img1Ainput" placeholder="img path" class="no">
+      <input id="img1A" type="file" value="img1A" class="custom-file-input" name="img1A" onchange="javascript: document.getElementById ('img1Ainput').value = this.value"
+        multiple/>
 
-      <label for="img2A" class="custom-file-upload">
-        <input type="text" readonly="readonly" id="img2Ainput" placeholder="img path"> Upload your image
-      </label>
-      <input id="img2A" type="file" value="img2A" name="img2A" onchange="javascript: document.getElementById ('img2Ainput').value = this.value"
-      />
-
-
-      <button id="nextToB" class="nextToB tablink" onclick="openLink(event, 'Left')">
+      <button id="nextToB" class="nextToB tablink prevent" onclick="openLink(event, 'Left')">
         <span>Next &raquo; </span>
       </button>
       <button id="prev" class="prev"></button>
-
-
-
 
     </div>
     <!-- Second section -->
@@ -231,27 +220,19 @@
       <h2>
         <label for="upload-photo">Adding images :</label>
       </h2>
+      <h6> * Upload one or more images</h6>
 
-      <label for="img1B" class="custom-file-upload">
-        <input type="text" readonly="readonly" id="img1Binput" placeholder="img path"> Upload your image
-      </label>
-      <input id="img1B" type="file" value="img1B" name="img1B" onchange="javascript: document.getElementById ('img1Binput').value = this.value"
-      />
 
-      <label for="img2B" class="custom-file-upload">
-        <input type="text" readonly="readonly" id="img2Binput" placeholder="img path"> Upload your image
-      </label>
-      <input id="img2B" type="file" value="img2B" name="img2B" onchange="javascript: document.getElementById ('img2Binput').value = this.value"
-      />
+      <input type="text" readonly="readonly" id="img1Binput" placeholder="img path" class="no">
+      <input id="img1B" type="file" value="img1B" class="custom-file-input" name="img1B" onchange="javascript: document.getElementById ('img1Binput').value = this.value"
+        multiple/>
 
-      <button id="nextToD" class="nextToD" onclick="openLink(event,'Top')">
+      <button id="nextToD" class="nextToD prevent" onclick="openLink(event,'Top')">
         <span>Next &raquo;</span>
       </button>
-      <button id="previousToA" class="previousToA" onclick="openLink(event,'Fade')">
+      <button id="previousToA" class="previousToA prevent" onclick="openLink(event,'Fade')">
         <span> &laquo; Previous </span>
       </button>
-
-
 
     </div>
 
@@ -352,22 +333,17 @@
       <h2>
         <label for="upload-photo">Adding images :</label>
       </h2>
-      <label for="img1D" class="custom-file-upload">
-        <input type="text" readonly="readonly" id="img1Dinput" placeholder="img path"> Upload your image
-      </label>
-      <input id="img1D" type="file" value="img1D" name="img1D" onchange="javascript: document.getElementById ('img1Dinput').value = this.value"
-      />
+      <h6> * Upload one or more images</h6>
 
-      <label for="img2D" class="custom-file-upload">
-        <input type="text" readonly="readonly" id="img2Dinput" placeholder="img path"> Upload your image
-      </label>
-      <input id="img2D" type="file" value="img2D" name="img2D" onchange="javascript: document.getElementById ('img2Dinput').value = this.value"
-      />
-      <button id="previousToB" class="previousToB" onclick="openLink(event,'Left')">
+      <input type="text" readonly="readonly" id="img1Dinput" placeholder="img path" class="no">
+      <input id="img1D" type="file" value="img1D" class="custom-file-input" name="img1D" onchange="javascript: document.getElementById ('img1Dinput').value = this.value"
+        multiple/>
+
+      <button id="previousToB" class="previousToB prevent" onclick="openLink(event,'Left')">
         <span> &laquo; Previous </span>
       </button>
 
-      <button id="nextToC" class="nextToC" onclick="openLink(event,'Right')">
+      <button id="nextToC" class="nextToC prevent" onclick="openLink(event,'Right')">
         <span>Next &raquo;</span>
       </button>
     </div>
@@ -476,24 +452,16 @@
       <h2>
         <label for="upload-photo">Adding images :</label>
       </h2>
+      <h6> * Upload one or more images</h6>
 
-      <label for="img1C" class="custom-file-upload">
-        <input type="text" readonly="readonly" id="img1Cinput" placeholder="img path"> Upload your image
-      </label>
-      <input id="img1C" type="file" value="img1C" name="img1C" onchange="javascript: document.getElementById ('img1Cinput').value = this.value"
-      />
+      <input type="text" readonly="readonly" id="img1Cinput" placeholder="img path" class="no">
+      <input id="img1C" type="file" value="img1C" class="custom-file-input" name="img1C" onchange="javascript: document.getElementById ('img1Cinput').value = this.value"
+        multiple/>
 
-      <label for="img2C" class="custom-file-upload">
-        <input type="text" readonly="readonly" id="img2Cinput" placeholder="img path"> Upload your image
-      </label>
-      <input id="img2C" type="file" value="img2C" name="img2C" onchange="javascript: document.getElementById ('img2Cinput').value = this.value"
-      />
-
-
-      <button id="previousToD" class="previousToD" onclick="openLink(event,'Top')">
+      <button id="previousToD" class="previousToD prevent" onclick="openLink(event,'Top')">
         <span> &laquo; Previous </span>
       </button>
-      <button id="nextToE" class="nextToE" onclick="openLink(event,'Bottom')">
+      <button id="nextToE" class="nextToE prevent" onclick="openLink(event,'Bottom')">
         <span>Next &raquo;</span>
       </button>
 
@@ -526,20 +494,13 @@
       <h2>
         <label for="upload-photo">Adding images :</label>
       </h2>
+      <h6> * Upload one or more images</h6>
 
-      <label for="img1E" class="custom-file-upload">
-        <input type="text" readonly="readonly" id="img1Einput" placeholder="img path"> Upload your image
-      </label>
-      <input id="img1E" type="file" value="img1E" name="img1E" onchange="javascript: document.getElementById ('img1Einput').value = this.value"
-      />
+      <input type="text" readonly="readonly" id="img1Einput" placeholder="img path" class="no">
+      <input id="img1E" type="file" value="img1E" class="custom-file-input" name="img1E" onchange="javascript: document.getElementById ('img1Einput').value = this.value"
+        multiple/>
 
-      <label for="img2E" class="custom-file-upload">
-        <input type="text" readonly="readonly" id="img2Einput" placeholder="img path"> Upload your image
-      </label>
-      <input id="img2E" type="file" value="img2E" name="img2E" onchange="javascript: document.getElementById ('img2Einput').value = this.value"
-      />
-
-      <button id="previousToC" class="previousToC" onclick="openLink(event,'Right')">
+      <button id="previousToC" class="previousToC prevent" onclick="openLink(event,'Right')">
         <span> &laquo; Previous </span>
       </button>
       <button class="submit" id="submit" type="submit" name="submit">
