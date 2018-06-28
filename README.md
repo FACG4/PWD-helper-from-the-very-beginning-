@@ -8,20 +8,19 @@ A website that contains :
 * A Service providers Accessibility Checklist.
 * Attaching images for places.
 * Adding comments for every section.
-* Analysis result of the form
+* Analysis result of the form.
 * Ability to export the result for document.
 
 ### Problem Statement :question:
-(PWD) People  With Disabilities in our country faces a lot of problems and difficulties to do their daily normal activities so we create an application to help engineers to designing suitable places for facilitating the movement of those people,
-
+(PWD) People  With Disabilities in our country faces a lot of problems and difficulties to do their daily normal activities so we create an application to help engineers to designing suitable places for facilitating the movement of those people.
 ### User Journey :airplane:
 
 As a user I can :
-* contact with organization by phone number.
+* Contact with organization by phone number.
 * Go to fill a form That contains many sections about building's structure accessibility.
 * Upload images of this section.
 * Add comment for section.
-* fill all sections.
+* Fill all sections.
 * Submit the form info and and see the result of analysis.
 * Export your result to document file.
 
@@ -29,13 +28,15 @@ As a user I can :
 ##### As a developer : :computer:
 * In terminal :
   * ``` git clone git@github.com:FACG4/PWD-helper-from-the-very-beginning-.git ```
+  * ``` cd PWD-helper-from-the-very-beginning ```
+  * ``` npm install ```
   * ``` npm run start ```
 * In browser : :earth_asia:
   * Open link : localhost:3000
-  * Diving in our code  :swimmer:
+  * Dive in our app  :swimmer:
 
 ##### As a user :
-Visit our website : :link:
+visit our website : :link:
 
 https://accessibility-audit-pwd.herokuapp.com/
 
