@@ -1,22 +1,67 @@
 <div class="analysis" id="analysis">
   <h1 class="title"> This is your analysis</h1>
   {{#each solutions}} {{this}}
-  <br>
-  <br> {{/each}}
+    <br>
+    <br> {{/each}}
 </div>
 
 <div class="images">
-  {{#if img1Asize}}
-  <img src="./{{img1A}}" alt="image uploaded from section A"> {{/if}} {{#if img2Asize}}
-  <img src="./{{img2A}}" alt="image uploaded from section A"> {{/if}} {{#if img1Bsize}}
-  <img src="./{{img1B}}" alt="image uploaded from section B"> {{/if}} {{#if img2Bsize}}
-  <img src="./{{img2B}}" alt="image uploaded from section B"> {{/if}} {{#if img1Csize}}
-  <img src="./{{img1C}}" alt="image uploaded from section C"> {{/if}} {{#if img2Csize}}
-  <img src="./{{img2C}}" alt="image uploaded from section C"> {{/if}} {{#if img1Dsize}}
-  <img src="./{{img1D}}" alt="image uploaded from section D"> {{/if}} {{#if img2Dsize}}
-  <img src="./{{img2D}}" alt="image uploaded from section D"> {{/if}} {{#if img1Esize}}
-  <img src="./{{img1E}}" alt="image uploaded from section E"> {{/if}} {{#if img2Esize}}
-  <img src="./{{img2E}}" alt="image uploaded from section E"> {{/if}}
+  {{#if imagesPaths.img1A0}}<img src="./{{imagesPaths.img1A0}}" alt="image uploaded from section A"> {{/if}}
+  {{#if imagesPaths.img1A1}}<img src="./{{imagesPaths.img1A1}}" alt="image uploaded from section A"> {{/if}}
+  {{#if imagesPaths.img1A2}}<img src="./{{imagesPaths.img1A2}}" alt="image uploaded from section A"> {{/if}}
+  {{#if imagesPaths.img1A3}}<img src="./{{imagesPaths.img1A3}}" alt="image uploaded from section A"> {{/if}}
+  {{#if imagesPaths.img1A4}}<img src="./{{imagesPaths.img1A4}}" alt="image uploaded from section A"> {{/if}}
+  {{#if imagesPaths.img1A5}}<img src="./{{imagesPaths.img1A5}}" alt="image uploaded from section A"> {{/if}}
+  {{#if imagesPaths.img1A6}}<img src="./{{imagesPaths.img1A6}}" alt="image uploaded from section A"> {{/if}}
+  {{#if imagesPaths.img1A7}}<img src="./{{imagesPaths.img1A7}}" alt="image uploaded from section A"> {{/if}}
+  {{#if imagesPaths.img1A8}}<img src="./{{imagesPaths.img1A8}}" alt="image uploaded from section A"> {{/if}}
+  {{#if imagesPaths.img1A9}}<img src="./{{imagesPaths.img1A9}}" alt="image uploaded from section A"> {{/if}}
+
+  {{#if imagesPaths.img1B0}}<img src="./{{imagesPaths.img1B0}}" alt="image uploaded from section B"> {{/if}}
+  {{#if imagesPaths.img1B1}}<img src="./{{imagesPaths.img1B1}}" alt="image uploaded from section B"> {{/if}}
+  {{#if imagesPaths.img1B2}}<img src="./{{imagesPaths.img1B2}}" alt="image uploaded from section B"> {{/if}}
+  {{#if imagesPaths.img1B3}}<img src="./{{imagesPaths.img1B3}}" alt="image uploaded from section B"> {{/if}}
+  {{#if imagesPaths.img1B4}}<img src="./{{imagesPaths.img1B4}}" alt="image uploaded from section B"> {{/if}}
+  {{#if imagesPaths.img1B5}}<img src="./{{imagesPaths.img1B5}}" alt="image uploaded from section B"> {{/if}}
+  {{#if imagesPaths.img1B6}}<img src="./{{imagesPaths.img1B6}}" alt="image uploaded from section B"> {{/if}}
+  {{#if imagesPaths.img1B7}}<img src="./{{imagesPaths.img1B7}}" alt="image uploaded from section B"> {{/if}}
+  {{#if imagesPaths.img1B8}}<img src="./{{imagesPaths.img1B8}}" alt="image uploaded from section B"> {{/if}}
+  {{#if imagesPaths.img1B9}}<img src="./{{imagesPaths.img1B9}}" alt="image uploaded from section B"> {{/if}}
+
+  {{#if imagesPaths.img1C0}}<img src="./{{imagesPaths.img1C0}}" alt="image uploaded from section C"> {{/if}}
+  {{#if imagesPaths.img1C1}}<img src="./{{imagesPaths.img1C1}}" alt="image uploaded from section C"> {{/if}}
+  {{#if imagesPaths.img1C2}}<img src="./{{imagesPaths.img1C2}}" alt="image uploaded from section C"> {{/if}}
+  {{#if imagesPaths.img1C3}}<img src="./{{imagesPaths.img1C3}}" alt="image uploaded from section C"> {{/if}}
+  {{#if imagesPaths.img1C4}}<img src="./{{imagesPaths.img1C4}}" alt="image uploaded from section C"> {{/if}}
+  {{#if imagesPaths.img1C5}}<img src="./{{imagesPaths.img1C5}}" alt="image uploaded from section C"> {{/if}}
+  {{#if imagesPaths.img1C6}}<img src="./{{imagesPaths.img1C6}}" alt="image uploaded from section C"> {{/if}}
+  {{#if imagesPaths.img1C7}}<img src="./{{imagesPaths.img1C7}}" alt="image uploaded from section C"> {{/if}}
+  {{#if imagesPaths.img1C8}}<img src="./{{imagesPaths.img1C8}}" alt="image uploaded from section C"> {{/if}}
+  {{#if imagesPaths.img1C9}}<img src="./{{imagesPaths.img1C9}}" alt="image uploaded from section C"> {{/if}}
+
+  {{#if imagesPaths.img1D0}}<img src="./{{imagesPaths.img1D0}}" alt="image uploaded from section D"> {{/if}}
+  {{#if imagesPaths.img1D1}}<img src="./{{imagesPaths.img1D1}}" alt="image uploaded from section D"> {{/if}}
+  {{#if imagesPaths.img1D2}}<img src="./{{imagesPaths.img1D2}}" alt="image uploaded from section D"> {{/if}}
+  {{#if imagesPaths.img1D3}}<img src="./{{imagesPaths.img1D3}}" alt="image uploaded from section D"> {{/if}}
+  {{#if imagesPaths.img1D4}}<img src="./{{imagesPaths.img1D4}}" alt="image uploaded from section D"> {{/if}}
+  {{#if imagesPaths.img1D5}}<img src="./{{imagesPaths.img1D5}}" alt="image uploaded from section D"> {{/if}}
+  {{#if imagesPaths.img1D6}}<img src="./{{imagesPaths.img1D6}}" alt="image uploaded from section D"> {{/if}}
+  {{#if imagesPaths.img1D7}}<img src="./{{imagesPaths.img1D7}}" alt="image uploaded from section D"> {{/if}}
+  {{#if imagesPaths.img1D8}}<img src="./{{imagesPaths.img1D8}}" alt="image uploaded from section D"> {{/if}}
+  {{#if imagesPaths.img1D9}}<img src="./{{imagesPaths.img1D9}}" alt="image uploaded from section D"> {{/if}}
+
+  {{#if imagesPaths.img1E0}}<img src="./{{imagesPaths.img1E0}}" alt="image uploaded from section E"> {{/if}}
+  {{#if imagesPaths.img1E1}}<img src="./{{imagesPaths.img1E1}}" alt="image uploaded from section E"> {{/if}}
+  {{#if imagesPaths.img1E2}}<img src="./{{imagesPaths.img1E2}}" alt="image uploaded from section E"> {{/if}}
+  {{#if imagesPaths.img1E3}}<img src="./{{imagesPaths.img1E3}}" alt="image uploaded from section E"> {{/if}}
+  {{#if imagesPaths.img1E4}}<img src="./{{imagesPaths.img1E4}}" alt="image uploaded from section E"> {{/if}}
+  {{#if imagesPaths.img1E5}}<img src="./{{imagesPaths.img1E5}}" alt="image uploaded from section E"> {{/if}}
+  {{#if imagesPaths.img1E6}}<img src="./{{imagesPaths.img1E6}}" alt="image uploaded from section E"> {{/if}}
+  {{#if imagesPaths.img1E7}}<img src="./{{imagesPaths.img1E7}}" alt="image uploaded from section E"> {{/if}}
+  {{#if imagesPaths.img1E8}}<img src="./{{imagesPaths.img1E8}}" alt="image uploaded from section E"> {{/if}}
+  {{#if imagesPaths.img1E9}}<img src="./{{imagesPaths.img1E9}}" alt="image uploaded from section E"> {{/if}}
+
+
 </div>
 
 

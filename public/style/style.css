@@ -361,23 +361,6 @@ input[type='radio']:checked:after {
   width: 100%;
 }
 
-/* 
-input[type="file"] {
-  display: none !important;
-}
-
-.custom-file-upload {
-  display: inline-block;
-  padding: 6px 12px;
-  cursor: pointer;
-  background-color: #0069B6;
-  margin-top: 10px;
-  margin-right: 10px;
-  padding: 10px;
-  border-radius: 4px;
-  color: white;
-} */
-
 .custom-file-input::-webkit-file-upload-button {
   visibility: hidden;
   width: 150px;
@@ -396,6 +379,10 @@ input[type="file"] {
   padding: 10px;
   width: 120px;
   cursor: pointer;
+}
+
+.no {
+  display: none;
 }
 
 @media screen and (max-width: 600px) {
@@ -473,8 +460,4 @@ input[type="file"] {
   .locationDiv .locationInput {
     margin-top: 10px;
   }
-}
-
-.no{
-  display: none;
 }

@@ -5,7 +5,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 const controllers = require('./controllers/index.js');
-const helpers = require('./views/helpers/index');
+const helpers = require('./views/helpers/index.js');
 
 require('env2')('./config.env');
 
@@ -32,5 +32,4 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(controllers);
-
 module.exports = app;
