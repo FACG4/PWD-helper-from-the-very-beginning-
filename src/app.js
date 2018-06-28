@@ -32,5 +32,4 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(controllers);
-
 module.exports = app;
