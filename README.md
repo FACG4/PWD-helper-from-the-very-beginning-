@@ -1,26 +1,44 @@
 # PWD-helpers :wheelchair: :house: :office: :construction:
 
-###### By:  Israa, Sallam, Balsam, Inass   :two_women_holding_hands::two_women_holding_hands:
+###### Our team members:  Israa, Sallam, Balsam, Inass   :two_women_holding_hands::two_women_holding_hands:
 
 ### Description of the App :pencil:
 
 A website that contains :
-* Info about __humanity and inclusion__ organization.
 * A Service providers Accessibility Checklist.
-* Analysis result of the checklist.
+* Attaching images for places.
+* Adding comments for every section.
+* Analysis result of the form.
+* Ability to export the result for document.
 
 ### Problem Statement :question:
-
-Lack of information and skills for engineers relating to accessibility designing, consuming a lot of papers for filling forms.
+(PWD) People  With Disabilities in our country faces a lot of problems and difficulties to do their daily normal activities so we create an application to help engineers to designing suitable places for facilitating the movement of those people.
 ### User Journey :airplane:
 
 As a user I can :
-*  Visit the app and know about 'humanity and inclusion' organization.
-* Go to fill a form.
-* The form contains many sections about building's structure accessibility.
-* Check the feature that we displayed and upload images of this building.
-* Submit the form info and export it to doc file.
-* See home page with all places that are inserted by users.
+* Contact with organization by phone number.
+* Go to fill a form That contains many sections about building's structure accessibility.
+* Upload images of this section.
+* Add comment for section.
+* Fill all sections.
+* Submit the form info and and see the result of analysis.
+* Export your result to document file.
+
+### How to use :
+##### As a developer : :computer:
+* In terminal :
+  * ``` git clone git@github.com:FACG4/PWD-helper-from-the-very-beginning-.git ```
+  * ``` cd PWD-helper-from-the-very-beginning ```
+  * ``` npm install ```
+  * ``` npm run start ```
+* In browser : :earth_asia:
+  * Open link : localhost:3000
+  * Dive in our app  :swimmer:
+
+##### As a user :
+visit our website : :link:
+
+https://accessibility-audit-pwd.herokuapp.com/
 
 
 ### Link for prototype :link:
