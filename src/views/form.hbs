@@ -1,18 +1,17 @@
 <title>
   Form</title>
 {{>sideNav}}
-
 <div class="allForm" id="allForm">
 
   <form action="/analysis" method="post" id="form" enctype="multipart/form-data">
     <div id="Fade" class="w3-container city w3-animate-opacity">
       <div class="locationDiv">
-        <label class="location" for="place">Location Name:</label>
+        <label class="location" for="place">Location Name :</label>
         <input class="locationInput" type="text" id="place" name="location" value="" placeholder="location">
       </div>
-      <h1>SECTION A: APROACH AND ENTRANCE </h1>
+      <h1>SECTION A : APROACH AND ENTRANCE </h1>
       <h3>A.1 Is the entrance of the building located at less than 50mt from the street?</h3>
-      <input type="radio" name="A1" value="Yes"> Yes
+      <input type="radio" name="A1" value="Yes">
       <input type="radio" name="A1" value="No" id='A1'> No
       <input type="radio" name="A1" value="dk"> Don't Know
       <h3>A.2 Is the entrance of the building located at less than 50mt from the parking lot?</h3>
@@ -153,48 +152,44 @@
       <h2>
         <label for="upload-photo">Adding images :</label>
       </h2>
+      <h6> * Upload one or more images</h6>
 
-      <label for="img1A" class="custom-file-upload">
-        <input type="text" readonly="readonly" id="img1Ainput" placeholder="img path" > Upload your image
-      </label>
-      <input id="img1A" type="file" value="img1A" name="img1A" onchange="javascript: document.getElementById ('img1Ainput').value = this.value" multiple
-      />
+      <input type="text" readonly="readonly" id="img1Ainput" placeholder="img path" class="no">
+      <input id="img1A" type="file" value="img1A" class="custom-file-input" name="img1A" onchange="javascript: document.getElementById ('img1Ainput').value = this.value"
+        multiple/>
 
-      <button id="nextToB" class="nextToB tablink" onclick="openLink(event, 'Left')">
+      <button id="nextToB" class="nextToB tablink prevent" onclick="openLink(event, 'Left')">
         <span>Next &raquo; </span>
       </button>
       <button id="prev" class="prev"></button>
 
-
-
-
     </div>
     <!-- Second section -->
     <div id="Left" class="w3-container city w3-animate-left" style="display:none">
-      <h1>SECTION B: ENTRANCE</h1>
+      <h1>SECTION B : ENTRANCE</h1>
       <h3>B1 Is the entrance to the building marked and visible?</h3>
       <input type="radio" value="Yes" name="B1"> Yes
       <input type="radio" id="B.1" value="No" name="B1"> No
-      <input type="radio" value="DK" name="B1"> Don't Know
+      <input type="radio" value="DK" name="B1"> N/A
 
       <h3>B2 A.5.2 Is the main entrance accessible? If not, is there an alternative accessible entrance that can be used independently
         and in the same hours of the main entrance?</h3>
       <input type="radio" value="Yes" name="B.2"> Yes
       <input type="radio" value="No" id="B.2" name="B.2"> No
-      <input type="radio" value="DK" name="B.2"> Don't Know
+      <input type="radio" value="DK" name="B.2"> N/A
 
 
       <h3>B3 Is the main entrance leveled? If any threshold is in place, the height doesn’t exceed 20mm?</h3>
       <input type="radio" value="Yes" name="B.3"> Yes
       <input type="radio" value="No" id="B.3" name="B.3"> No
-      <input type="radio" value="DK" name="B.3"> Don't Know
+      <input type="radio" value="DK" name="B.3"> N/A
 
 
       <h3>B4 Is the unobstructed width of the entrance doorway at least 90cm? Is the unobstructed height of the entrance doorway
         at least 200cm?</h3>
       <input type="radio" value="Yes" name="B.4"> Yes
       <input type="radio" value="No" id="B.4" name="B.4"> No
-      <input type="radio" value="DK" name="B.4"> Don't Know
+      <input type="radio" value="DK" name="B.4"> N/A
 
 
       <h3>B5 Is the horizontal maneuvering space in front of the entrance door of minimum 150cm by 1 50cm? Is there a clear space
@@ -202,26 +197,21 @@
         a wheel chair?</h3>
       <input type="radio" value="Yes" name="B.5"> Yes
       <input type="radio" value="No" id="B.5" name="B.5"> No
-      <input type="radio" value="DK" name="B.5"> Don't Know
+      <input type="radio" value="DK" name="B.5"> N/A
 
 
       <h3>B6 Is the door equipped with a handle that is operable with one hand and does not required tight grasping, pinching,
         or twisting of the wrist? </h3>
       <input type="radio" value="Yes" name="B.6"> Yes
       <input type="radio" value="No" id="B.6" name="B.6"> No
-      <input type="radio" value="DK" name="B.6"> Don't Know
+      <input type="radio" value="DK" name="B.6"> N/A
 
 
       <h3>B7 The carpets or mats at the entrance of the building are less than 12mm? Are the edge of the carpets or mats securely
         attached? </h3>
       <input type="radio" value="Yes" name="B.7"> Yes
       <input type="radio" value="No" id="B.7" name="B.7"> No
-      <input type="radio" value="DK" name="B.7"> Don't Know
-
-      <h3>B.8 Is the entrance to the building marked and visible?</h3>
-    <input type="radio" value="Yes" name="B.8"> Yes
-    <input type="radio" value="No" id="B.8" name="B.8"> No
-    <input type="radio" value="DK" name="B.8"> Don't Know
+      <input type="radio" value="DK" name="B.7"> N/A
       <br>
       <h2>
         <label> Add Comments :</label>
@@ -230,21 +220,19 @@
       <h2>
         <label for="upload-photo">Adding images :</label>
       </h2>
+      <h6> * Upload one or more images</h6>
 
-      <label for="img1B" class="custom-file-upload">
-        <input type="text" readonly="readonly" id="img1Binput" placeholder="img path"> Upload your image
-      </label>
-      <input id="img1B" type="file" value="img1B" name="img1B" onchange="javascript: document.getElementById ('img1Binput').value = this.value" multiple
-      />
 
-      <button id="nextToD" class="nextToD" onclick="openLink(event,'Top')">
+      <input type="text" readonly="readonly" id="img1Binput" placeholder="img path" class="no">
+      <input id="img1B" type="file" value="img1B" class="custom-file-input" name="img1B" onchange="javascript: document.getElementById ('img1Binput').value = this.value"
+        multiple/>
+
+      <button id="nextToD" class="nextToD prevent" onclick="openLink(event,'Top')">
         <span>Next &raquo;</span>
       </button>
-      <button id="previousToA" class="previousToA" onclick="openLink(event,'Fade')">
+      <button id="previousToA" class="previousToA prevent" onclick="openLink(event,'Fade')">
         <span> &laquo; Previous </span>
       </button>
-
-
 
     </div>
 
@@ -252,7 +240,7 @@
 
     <!-- Third Section -->
     <div id="Top" class="w3-container city w3-animate-top" style="display:none">
-      <h1>SECTION D: TOILET ROOM</h1>
+      <h1>SECTION D : TOILET ROOM</h1>
       <h3>D.1 Is there at least one accessible toilet room?</h3>
       <input type="radio" name="D.1" value="Yes"> Yes
       <input type="radio" name="D.1" value="No" id="D.1"> No
@@ -345,54 +333,54 @@
       <h2>
         <label for="upload-photo">Adding images :</label>
       </h2>
-      <label for="img1D" class="custom-file-upload">
-        <input type="text" readonly="readonly" id="img1Dinput" placeholder="img path"> Upload your image
-      </label>
-      <input id="img1D" type="file" value="img1D" name="img1D" onchange="javascript: document.getElementById ('img1Dinput').value = this.value" multiple
-      />
+      <h6> * Upload one or more images</h6>
 
-      <button id="previousToB" class="previousToB" onclick="openLink(event,'Left')">
+      <input type="text" readonly="readonly" id="img1Dinput" placeholder="img path" class="no">
+      <input id="img1D" type="file" value="img1D" class="custom-file-input" name="img1D" onchange="javascript: document.getElementById ('img1Dinput').value = this.value"
+        multiple/>
+
+      <button id="previousToB" class="previousToB prevent" onclick="openLink(event,'Left')">
         <span> &laquo; Previous </span>
       </button>
 
-      <button id="nextToC" class="nextToC" onclick="openLink(event,'Right')">
+      <button id="nextToC" class="nextToC prevent" onclick="openLink(event,'Right')">
         <span>Next &raquo;</span>
       </button>
     </div>
 
     <!-- Fourth section -->
     <div id="Right" class="w3-container city w3-animate-right" style="display:none">
-      <h1>SECTION C: ACCESS TO SERVICES</h1>
+      <h1>SECTION C : ACCESS TO SERVICES</h1>
 
       <h3>C1 The accessible entrance provide direct access to the main floor and reception? </h3>
       <input type="radio" value="Yes" name="C.1"> Yes
       <input type="radio" value="No" id="C.1" name="C.1"> No
-      <input type="radio" value="DK" name="C.1"> Don't Know
+      <input type="radio" value="DK" name="C.1"> N/A
 
       <h3>C2 Are all public spaces on at least one accessible route? </h3>
       <input type="radio" value="Yes" name="C.2"> Yes
       <input type="radio" value="No" id="C.2" name="C.2"> No
-      <input type="radio" value="DK" name="C.2"> Don't Know
+      <input type="radio" value="DK" name="C.2"> N/A
 
       <h3>C3 Is the surface of the routes stable, flat and negotiable (no gravel, no sand, no obstacles)?</h3>
       <input type="radio" value="Yes" name="C.3"> Yes
       <input type="radio" value="No" id="C.3" name="C.3"> No
-      <input type="radio" value="DK" name="C.3"> Don't Know
+      <input type="radio" value="DK" name="C.3"> N/A
 
       <h3>C4 Is the unobstructed width of the routes minimum 120cm, ideally 180cm?</h3>
       <input type="radio" value="Yes" name="C.4"> Yes
       <input type="radio" value="No" id="C.4" name="C.4"> No
-      <input type="radio" value="DK" name="C.4"> Don't Know
+      <input type="radio" value="DK" name="C.4"> N/A
 
       <h3>C5 If 90 degrees wheelchair turns are required, a minimum maneuver space of 120cmx120cm, ideally 150cm x 150cm is provided?</h3>
       <input type="radio" value="Yes" name="C.5"> Yes
       <input type="radio" value="No" id="C.5" name="C.5"> No
-      <input type="radio" value="DK" name="C.5"> Don't Know
+      <input type="radio" value="DK" name="C.5"> N/A
 
       <h3>C6 If If 180 degrees wheelchair turns are required, a minimum maneuver space of 200cm x 150cm is provided? </h3>
       <input type="radio" value="Yes" name="C.6"> Yes
       <input type="radio" value="No" id="C.6" name="C.6"> No
-      <input type="radio" value="DK" name="C.6"> Don't Know
+      <input type="radio" value="DK" name="C.6"> N/A
 
       <h2>C.7 Vertical circulation </h2>
       <h2>C.7.1 Internal Stairs</h2>
@@ -402,120 +390,61 @@
         180 mm.</h3>
       <input type="radio" value="Yes" name="C.7.1.1"> Yes
       <input type="radio" value="No" id="C.7.1.1" name="C.7.1.1"> No
-      <input type="radio" value="DK" name="C.7.1.1"> Don't Know
+      <input type="radio" value="DK" name="C.7.1.1"> N/A
 
       <h3>C7.1.2 Is the minimum width of the stairs 120cm? Is the minimum width between handrails 100cm?</h3>
       <input type="radio" value="Yes" name="C.7.1.2"> Yes
       <input type="radio" value="No" id="C.7.1.2" name="C.7.1.2"> No
-      <input type="radio" value="DK" name="C.7.1.2"> Don't Know
+      <input type="radio" value="DK" name="C.7.1.2"> N/A
 
       <h3>C7.1.3 Is the rise of the step closed?</h3>
       <input type="radio" value="Yes" name="C.7.1.3"> Yes
       <input type="radio" value="No" id="C.7.1.3" name="C.7.1.3"> No
-      <input type="radio" value="DK" name="C.7.1.3"> Don't Know
+      <input type="radio" value="DK" name="C.7.1.3"> N/A
 
       <h3>C7.1.4 The flight of steps contain maximum 16 risers? *Exceptionally when the plan area is restricted, a flight of
         a stairs shall contain no more than 20 risers.</h3>
       <input type="radio" value="Yes" name="C.7.1.4"> Yes
       <input type="radio" value="No" id="C.7.1.4" name="C.7.1.4"> No
-      <input type="radio" value="DK" name="C.7.1.4"> Don't Know
+      <input type="radio" value="DK" name="C.7.1.4"> N/A
 
       <h3>C7.1.5 Is the minimum width of the landing 150cm?</h3>
       <input type="radio" value="Yes" name="C.7.1.5"> Yes
       <input type="radio" value="No" id="C.7.1.5" name="C.7.1.5"> No
-      <input type="radio" value="DK" name="C.7.1.5"> Don't Know
+      <input type="radio" value="DK" name="C.7.1.5"> N/A
 
       <h3>C7.1.6 Is the clear height under stairs minimum 210cm? </h3>
       <input type="radio" value="Yes" name="C.7.1.6"> Yes
       <input type="radio" value="No" id="C.7.1.6" name="C.7.1.6"> No
-      <input type="radio" value="DK" name="C.7.1.6"> Don't Know
+      <input type="radio" value="DK" name="C.7.1.6"> N/A
 
       <h2>C.7.2 Handrails</h2>
       <h3>C7.2.1 Are handrails located on both sides of the ramp and stairs?</h3>
       <input type="radio" value="Yes" name="C.7.2.1"> Yes
       <input type="radio" value="No" id="C.7.2.1" name="C.7.2.1"> No
-      <input type="radio" value="DK" name="C.7.2.1"> Don't Know
+      <input type="radio" value="DK" name="C.7.2.1"> N/A
 
       <h3>C7.2.2 Is the handrails profile diameter max 4.5cm and minimum 3.5 cm? </h3>
       <input type="radio" value="Yes" name="C.7.2.2"> Yes
       <input type="radio" value="No" id="C.7.2.2" name="C.7.2.2"> No
-      <input type="radio" value="DK" name="C.7.2.2"> Don't Know
+      <input type="radio" value="DK" name="C.7.2.2"> N/A
 
       <h3>C7.2.3 Are the handrails located at least 4cm from the adjacent wall or other obstructions? </h3>
       <input type="radio" value="Yes" name="C.7.2.3"> Yes
       <input type="radio" value="No" id="C.7.2.3" name="C.7.2.3"> No
-      <input type="radio" value="DK" name="C.7.2.3"> Don't Know
+      <input type="radio" value="DK" name="C.7.2.3"> N/A
 
       <h3>C7.2.4 Are the first set of handrails located between 85cm and 100cm? Are the second set of handrails located between
         60 and 75cm?</h3>
       <input type="radio" value="Yes" name="C.7.2.4"> Yes
       <input type="radio" value="No" id="C.7.2.4" name="C.7.2.4"> No
-      <input type="radio" value="DK" name="C.7.2.4"> Don't Know
+      <input type="radio" value="DK" name="C.7.2.4"> N/A
 
       <h3>C7.2.5 Are handrails horizontally extended for at least 30cm at the begging and end of the ramp/stairs?</h3>
       <input type="radio" value="Yes" name="C.7.2.5"> Yes
       <input type="radio" value="No" id="C.7.2.5" name="C.7.2.5"> No
-      <input type="radio" value="DK" name="C.7.2.5"> Don't Know
+      <input type="radio" value="DK" name="C.7.2.5"> N/A
       <br>
-
-
-      <h2>C.7.3 Elevators</h2>
-      <h3>C7.3.1 Is the minimum inner dimension of the car 110cm x140cm? Is a minimum unobstructed entrance width of 80cm (ideally 90cm) provided? </h3>
-      <input type="radio" value="Yes" name="C.7.3.1"> Yes
-      <input type="radio" value="No" id="C.7.3.1" name="C.7.3.1"> No
-      <input type="radio" value="DK" name="C.7.3.1"> Don't Know
-
-      <h3>C.7.3.2 Is there at least one horizontally fixed handrail in the car, on the same side as the car operating panel?</h3>
-      <input type="radio" value="Yes" name="C.7.3.2"> Yes
-      <input type="radio" value="No" id="C.7.3.2" name="C.7.3.2"> No
-      <input type="radio" value="DK" name="C.7.3.2"> Don't Know
-
-      <h3>C.7.3.3 Are controls placed at a minimum distance of 500 mm (600 mm recommended) from any adjacent corner or wall and between 900 mm and 1 200 mm above floor level, preferably 1 100 mm?</h3>
-      <input type="radio" value="Yes" name="C.7.3.3"> Yes
-      <input type="radio" value="No" id="C.7.3.3" name="C.7.3.3"> No
-      <input type="radio" value="DK" name="C.7.3.3"> Don't Know
-
-      <h3>C.7.3.4 Are there Braille or tactile figures complementing the information in the control panel buttons?</h3>
-      <input type="radio" value="Yes" name="C.7.3.4"> Yes
-      <input type="radio" value="No" id="C.7.3.4" name="C.7.3.4"> No
-      <input type="radio" value="DK" name="C.7.3.4"> Don't Know
-
-      <h2>C.7.4 Wayfinding and Signing</h2>
-      <h3>C.7.4.1 Are there tactile surface indicators in place (attention pattern and guiding pattern)?</h3>
-      <input type="radio" value="Yes" name="C.7.4.1"> Yes
-      <input type="radio" value="No" id="C.7.4.1" name="C.7.4.1"> No
-      <input type="radio" value="DK" name="C.7.4.1"> Don't Know
-
-      <h3>C.7.4.2 Is a wayfinding system provided (map/tactile map of the facility, routes indicators, audio guidance)?</h3>
-      <input type="radio" value="Yes" name="C.7.4.2"> Yes
-      <input type="radio" value="No" id="C.7.4.2" name="C.7.4.2"> No
-      <input type="radio" value="DK" name="C.7.4.2"> Don't Know
-
-      <h3>C.7.4.3 Are there signs designating rooms and spaces (room number, room?</h3>
-      <input type="radio" value="Yes" name="C.7.4.3"> Yes
-      <input type="radio" value="No" id="C.7.4.3" name="C.7.4.3"> No
-      <input type="radio" value="DK" name="C.7.4.3"> Don't Know
-
-      <h3>C.7.4.4 The characters of the signs contrast with the background?</h3>
-      <input type="radio" value="Yes" name="C.7.4.4"> Yes
-      <input type="radio" value="No" id="C.7.4.4" name="C.7.4.4"> No
-      <input type="radio" value="DK" name="C.7.4.4"> Don't Know
-
-      <h3>C.7.4.5 Are the text character raised?</h3>
-      <input type="radio" value="Yes" name="C.7.4.5"> Yes
-      <input type="radio" value="No" id="C.7.4.5" name="C.7.4.5"> No
-      <input type="radio" value="DK" name="C.7.4.5"> Don't Know
-
-      <h3>C.7.4.6 Are signs mounted on the wall on the latch side of the door?</h3>
-      <input type="radio" value="Yes" name="C.7.4.6"> Yes
-      <input type="radio" value="No" id="C.7.4.6" name="C.7.4.6"> No
-      <input type="radio" value="DK" name="C.7.4.6"> Don't Know
-
-      <h3>C.7.4.7 Are signs mounted between 120cm and max 160cm from the floor?</h3>
-      <input type="radio" value="Yes" name="C.7.4.7"> Yes
-      <input type="radio" value="No" id="C.7.4.7" name="C.7.4.7"> No
-      <input type="radio" value="DK" name="C.7.4.7"> Don't Know
-
       <h2>
         <label> Add Comments :</label>
       </h2>
@@ -523,17 +452,16 @@
       <h2>
         <label for="upload-photo">Adding images :</label>
       </h2>
+      <h6> * Upload one or more images</h6>
 
-      <label for="img1C" class="custom-file-upload">
-        <input type="text" readonly="readonly" id="img1Cinput" placeholder="img path"> Upload your image
-      </label>
-      <input id="img1C" type="file" value="img1C" name="img1C" onchange="javascript: document.getElementById ('img1Cinput').value = this.value" multiple
-      />
+      <input type="text" readonly="readonly" id="img1Cinput" placeholder="img path" class="no">
+      <input id="img1C" type="file" value="img1C" class="custom-file-input" name="img1C" onchange="javascript: document.getElementById ('img1Cinput').value = this.value"
+        multiple/>
 
-      <button id="previousToD" class="previousToD" onclick="openLink(event,'Top')">
+      <button id="previousToD" class="previousToD prevent" onclick="openLink(event,'Top')">
         <span> &laquo; Previous </span>
       </button>
-      <button id="nextToE" class="nextToE" onclick="openLink(event,'Bottom')">
+      <button id="nextToE" class="nextToE prevent" onclick="openLink(event,'Bottom')">
         <span>Next &raquo;</span>
       </button>
 
@@ -542,7 +470,7 @@
 
     <!-- Fifth section -->
     <div id="Bottom" class="w3-container city w3-animate-bottom" style="display:none">
-      <h1>SECTION E: EMERGENCY, EVACUATION, ALARMS</h1>
+      <h1>SECTION E : EMERGENCY, EVACUATION, ALARMS</h1>
 
       <h3>E.1 Is there a fire alarm system, do they have both flashing lights and audible signals? </h3>
       <input type="radio" name="E.1" value="Yes"> Yes
@@ -566,14 +494,13 @@
       <h2>
         <label for="upload-photo">Adding images :</label>
       </h2>
+      <h6> * Upload one or more images</h6>
 
-      <label for="img1E" class="custom-file-upload">
-        <input type="text" readonly="readonly" id="img1Einput" placeholder="img path"> Upload your image
-      </label>
-      <input id="img1E" type="file" value="img1E" name="img1E" onchange="javascript: document.getElementById ('img1Einput').value = this.value" multiple
-      />
+      <input type="text" readonly="readonly" id="img1Einput" placeholder="img path" class="no">
+      <input id="img1E" type="file" value="img1E" class="custom-file-input" name="img1E" onchange="javascript: document.getElementById ('img1Einput').value = this.value"
+        multiple/>
 
-      <button id="previousToC" class="previousToC" onclick="openLink(event,'Right')">
+      <button id="previousToC" class="previousToC prevent" onclick="openLink(event,'Right')">
         <span> &laquo; Previous </span>
       </button>
       <button class="submit" id="submit" type="submit" name="submit">
@@ -584,6 +511,8 @@
     </div>
 
   </form>
+
 </div>
+
 <script type="text/javascript" src="/js/domForForm.js"></script>
 <script type="text/javascript" src="/js/addIcon.js"></script>
